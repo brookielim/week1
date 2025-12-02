@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>week1</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;700&family=Numans&display=swap" rel="stylesheet">
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #ffffff;
+      font-family: 'Numans', sans-serif;
+    }
+
+    .back {
+      position: fixed;
+      top: 24px;
+      left: 24px;
+      font-size: 16px;
+      color: #666;
+      text-decoration: none;
+      z-index: 10;
+    }
+
+    .board-wrap {
+      position: relative;
+      width: 1000px;
+      max-width: 95vw;
+      aspect-ratio: 4 / 3;
+    }
+
+    .board-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .note-input {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 16px;
+
+      font-family: 'Montserrat Alternates', sans-serif;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 1.4;
+      color: #703D3C;
+
+      outline: none;
+      border: none;
+      background: transparent;
+      z-index: 2;
+      cursor: text;
+    }
+
+    .note-left {
+      top: 20%;
+      left: 5%;
+      width: 26%;
+      height: 34%;
+    }
+
+    .note-right {
+      top: 20%;
+      right: 5%;
+      width: 26%;
+      height: 34%;
+    }
+
+    .note-bottom {
+      top: 58%;
+      left: 41%;
+      width: 30%;
+      height: 30%;
+    }
+  </style>
+</head>
+
+<body>
+  <a href="../collection.html" class="back">&lt; back</a>
+
+  <div class="board-wrap">
+    <img src="board.png" class="board-bg" alt="grateful notes board">
+
+    <div class="note-input note-left"  contenteditable="true">
+      The first thing I was grateful for was…
+    </div>
+    <div class="note-input note-right" contenteditable="true">
+      The second thing I was grateful for was…
+    </div>
+    <div class="note-input note-bottom" contenteditable="true">
+      The third thing I was grateful for was…
+    </div>
+  </div>
+</body>
+</html>
